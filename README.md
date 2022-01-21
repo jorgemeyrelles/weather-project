@@ -22,7 +22,7 @@ In your github profile, to clone the repository
 
 And then, It is possible following next steps to load project.
 
-## `npm install`
+### `npm install`
 
 Going to local direry of project cloned and use npm install.
 
