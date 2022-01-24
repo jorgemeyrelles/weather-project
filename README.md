@@ -29,7 +29,7 @@ Going to local direry of project cloned and use npm install.
 
 Within repository, installing all dependences:
 
-#### Google maps, Google places autocomplete and combobox
+#### Google maps and Google places autocomplete
 
 ````
 $ npm i use-places-autocomplete @react-google-maps/api
