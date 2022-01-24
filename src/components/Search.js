@@ -48,7 +48,7 @@ function Search(props) {
       console.error(error);
     }
     // console.log(val);
-    setValue('', false);
+    setValue(val, false);
   };
 
   return (
