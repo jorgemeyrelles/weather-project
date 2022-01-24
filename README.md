@@ -28,7 +28,7 @@ Going to local direry of project cloned and use npm install.
 
 ### `install dependeces locally`
 
-Within repository install all dependences:
+Within repository, installing all dependences:
 
 #### Google maps, Google places autocomplete and combobox
 ````
