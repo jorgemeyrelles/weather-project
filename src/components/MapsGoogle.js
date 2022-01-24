@@ -12,7 +12,7 @@ function MapsGoogle() {
     position: 'absolute',
     bottom: '10px',
     width: '90%',
-    height: '80vh',
+    height: '85vh',
     cursor: 'pointer',
   };
 
@@ -20,7 +20,7 @@ function MapsGoogle() {
 
   const { isLoaded, loadError } = useLoadScript({
     id: 'google-map-script',
-    googleMapsApiKey: "AIzaSyAcifhLvWUgJ_I7eGGWhsTJs4w16o0iK1k",
+    googleMapsApiKey: process.env.API_KEY_MAPS || 'AIzaSyAcifhLvWUgJ_I7eGGWhsTJs4w16o0iK1k',
     libraries,
   });
 
@@ -65,7 +65,7 @@ function MapsGoogle() {
       <GoogleMap
         mapContainerStyle={containerStyle}
         center={ {lat: marker.lat, lng: marker.lon } }
-        zoom={5}
+        zoom={6}
         onLoad={onLoad}
         onUnmount={onUnmount}
         onClick={ (e) => submitBtn(e) }
@@ -73,12 +73,12 @@ function MapsGoogle() {
         { marker && <Marker
           key={ marker.timestamp }
           position={ { lat: marker.lat, lng: marker.lon } }
-          // icon={ {
-          //   url: "https://s3.amazonaws.com/satelital-resources/products/66034_0_b2518ac8-da19-4edd-9ba1-255a76334cf4_Big.jpg",
-          //   scaledSize: new window.google.maps.Size(55, 50),
-          //   origin: new window.google.maps.Point(0, 0),
-          //   anchor: new window.google.maps.Point(25, 25),
-          // } }
+          icon={ {
+            url: "https://adroitrobotics.com/wp-content/uploads/2019/10/logo_leafsense.png",
+            scaledSize: new window.google.maps.Size(55, 50),
+            origin: new window.google.maps.Point(0, 0),
+            anchor: new window.google.maps.Point(25, 25),
+          } }
         /> }
       </GoogleMap>
     </div>

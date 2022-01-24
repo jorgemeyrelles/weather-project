@@ -13,6 +13,8 @@ function ToHome() {
   const [value, setValue] = useState([]);
   const [load, setLoad] = useState(false);
   const [err, setErr] = useState(false);
+  const [toCelsius, setToCelsius] = useState(true);
+  const [toFar, setToFar] = useState(false);
 
   useEffect(() => {
     async function getWeather() {
@@ -38,8 +40,18 @@ function ToHome() {
     getWeather();
   }, [weather]);
 
+  const farenheit = () => {
+    setToCelsius(false);
+    setToFar(true);
+  };
+
+  const celsius = () => {
+    setToFar(false);
+    setToCelsius(true);
+  };
+
   const card = () => (
-    <div style={ { display: 'block', zIndex: '-1' } }>
+    <div style={ { display: 'block' } }>
       { err && <div>
           <div>{err}</div>
           <div>Try again using a city name valid</div>
@@ -64,10 +76,22 @@ function ToHome() {
           />
           <div className="condition">{value.current.condition.text}</div>
         </div>
-        <div className="details">
-          <div className="temp">{`Temperature: ${value.current.temp_c.toFixed(2).replace('.', ',')}°C / ${value.current.temp_f.toFixed(2).replace('.', ',')}°F`}</div>
-          <div className="temp">{`Feels Like: ${value.current.feelslike_c.toFixed(2).replace('.', ',')}°C / ${value.current.feelslike_f.toFixed(2).replace('.', ',')}°F`}</div>
-        </div>
+        { toCelsius && (
+          <div className="details">
+            <button className="btn" type="button" onClick={ () => farenheit() }>
+              <h4>To Farenheit</h4>
+            </button>
+            <div className="temp">{`Temperature: ${value.current.temp_c.toFixed(2).replace('.', ',')}°C`}</div>
+            <div className="temp">{`Feels Like: ${value.current.feelslike_c.toFixed(2).replace('.', ',')}°C`}</div>
+          </div>) }
+        { toFar && (
+          <div className="details">
+            <button className="btn" type="button" onClick={ () => celsius() }>
+              <h4>To Celsius</h4>
+            </button>
+            <div className="temp">{`Temperature: ${value.current.temp_f.toFixed(2).replace('.', ',')}°F`}</div>
+            <div className="temp">{`Feels Like: ${value.current.feelslike_f.toFixed(2).replace('.', ',')}°F`}</div>
+          </div>) }
       </div>
     </div>
   );

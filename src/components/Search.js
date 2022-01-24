@@ -32,8 +32,13 @@ function Search(props) {
 
   const handleInput = async (e) => {
     setValue(e.target.value);
-    // const data = await fetchWeather(e.target.value);
-    // setWeather(data);
+  };
+
+  const submitBtn = async (e) => {
+    e.preventDefault();
+    console.log(data);
+    const res = await fetchWeather(data[0].description);
+    setWeather(res);
   };
 
   const handleSelect = async (val) => {
@@ -52,14 +57,14 @@ function Search(props) {
   };
 
   return (
-    <div className="search">
+    <form onSubmit={ (e) => submitBtn(e) } className="search">
       <Combobox onSelect={ handleSelect } aria-labelledby="demo">
         <ComboboxInput
           value={ value }
           onChange={ handleInput }
           disabled={ !ready }
-          placeholder="Type an address / direction"
-          style={ { background: 'none', border: 'none', color: 'white', width: '100%' } }
+          placeholder="Type a direction and select by list"
+          className="list"
         />
         <ComboboxPopover>
           <ComboboxList>
@@ -70,7 +75,7 @@ function Search(props) {
           </ComboboxList>
         </ComboboxPopover>
       </Combobox>
-    </div>
+    </form>
   );
 }
 
