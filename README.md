@@ -3,9 +3,8 @@
 It is a project about a weather website, where the user can insert by input(text) a name of city and state or district, and then, the home will be modificated as the result.
 Whether the text writed doesn't exist, a message of error will be showed up and a random city will be rendered on screen.
 
-## Next steps for project (updated at 20/01/2022)
+## Next steps for project (updated at 24/01/2022)
 
-- Modification of background according to condition weather of place requested.
 - Adding more information about weather, like: wind (direction and intensity) and air umidity.
 - Receive and show the user name on the screen.
 - Showing up by carousel the weather of most importants nations capital.
