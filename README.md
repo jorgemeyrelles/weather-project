@@ -30,14 +30,19 @@ Going to local direry of project cloned and use npm install.
 Within repository, installing all dependences:
 
 #### Google maps, Google places autocomplete and combobox
-````
-$ npm i use-places-autocomplete @react-google-maps/api @reach/combobox
 
+````
+$ npm i use-places-autocomplete @react-google-maps/api
+````
+#### Combobox
+
+````
+$ npm install @reach/combobox
 ````
 #### .env
+
 ````
 $ npm install dotenv
-
 ````
 
 ## Available Scripts
