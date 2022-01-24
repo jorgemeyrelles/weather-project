@@ -64,7 +64,7 @@ function MapsGoogle() {
       <Search marker={ marker } setMarker={ setMarker } />
       <GoogleMap
         mapContainerStyle={containerStyle}
-        center={ {lat: marker.lat, lng: marker.lon } }
+        center={ { lat: marker.lat, lng: marker.lon } }
         zoom={6}
         onLoad={onLoad}
         onUnmount={onUnmount}

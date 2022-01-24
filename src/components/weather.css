@@ -137,9 +137,8 @@ h2, h3 {
 .list {
   background: none;
   border: none;
-  /* border-bottom: 1px #ccc solid;
-  padding: 0 1em 0.5em 0; */
-  width: 80%;
+  border-bottom: none;
+  width: 100%;
   color: #fff;
   font-size: 1.1em;
 }
