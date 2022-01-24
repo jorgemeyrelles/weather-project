@@ -25,6 +25,7 @@ h2, h3 {
   color: #fff;
   position: absolute;
   width: 100%;
+  z-index: -2;
 }
 
 .weather-app::before {
@@ -83,7 +84,7 @@ h2, h3 {
 
 .panel {
   position: absolute;
-  width: 40%;
+  width: 50%;
   height: 100%;
   top: 0;
   right: 0;
@@ -92,7 +93,7 @@ h2, h3 {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.18);
-  z-index: 1;
+  z-index: 0;
   padding: 3em 2em;
   overflow-y: scroll;
 }

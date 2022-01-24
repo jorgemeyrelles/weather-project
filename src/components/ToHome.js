@@ -28,7 +28,7 @@ function ToHome() {
         setValue(wthErr);
         setLoad(true);
       } else {
-        console.log(weather);
+        console.log('aqui', weather);
         const wth = await weather;
         setValue(wth);
         setLoad(true);
@@ -39,7 +39,7 @@ function ToHome() {
   }, [weather]);
 
   const card = () => (
-    <div style={ { display: 'block' } }>
+    <div style={ { display: 'block', zIndex: '-1' } }>
       { err && <div>
           <div>{err}</div>
           <div>Try again using a city name valid</div>
@@ -47,7 +47,9 @@ function ToHome() {
       <div>
         <h3 className="brand">The Weather</h3>
         <div className="city-time">
-          <h2 className="name">{`${value.location.name} - ${value.location.country}`}</h2>
+          <h1 className="name">{value.location.name}</h1>
+          <h2 className="name">{value.location.region}</h2>
+          <h3 className="name">{value.location.country}</h3>
           <div className="time">{moment().format('DD/MM/yyyy - hh:mm A')}</div>
         </div>
       </div>
