@@ -26,6 +26,21 @@ And then, It is possible following next steps to load project.
 
 Going to local direry of project cloned and use npm install.
 
+### `install dependeces locally`
+
+Within repository install all dependences:
+
+#### Google maps, Google places autocomplete and combobox
+````
+$ npm i use-places-autocomplete @react-google-maps/api @reach/combobox
+
+````
+#### .env
+````
+$ npm install dotenv
+
+````
+
 ## Available Scripts
 
 In the project directory, you can run:
