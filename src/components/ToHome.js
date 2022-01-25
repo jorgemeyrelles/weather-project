@@ -18,7 +18,7 @@ function ToHome() {
 
   useEffect(() => {
     async function getWeather() {
-      // console.log(weather);
+      // console.log('toHome', weather);
       if (weather === 'rio de janeiro') {
         const wth = await fetchWeather(weather);
         setValue(wth);
@@ -30,9 +30,10 @@ function ToHome() {
         setValue(wthErr);
         setLoad(true);
       } else {
-        console.log('aqui', weather);
+        // console.log('aqui', weather);
         const wth = await weather;
         setValue(wth);
+        setErr(false);
         setLoad(true);
       }
       // console.log(wth.current.condition);

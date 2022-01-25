@@ -10,7 +10,7 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.25.0",
     "cities.json": "^1.1.5",
-    "dotenv": "^14.2.0",
+    "dotenv": "^14.3.0",
     "fa-icons": "^0.2.0",
     "moment": "^2.29.1",
     "react": "^17.0.2",

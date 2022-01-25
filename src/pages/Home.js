@@ -10,7 +10,7 @@ function Home() {
   const { weather } = useContext(WeatherContext);
   const [back, setBack] = useState('');
   useEffect(() => {
-    console.log('home', weather);
+    if (weather.error) return false;
     if (weather !== undefined && weather !== 'rio de janeiro' && weather.current.condition.text === 'Sunny') {
       setBack('https://images.pexels.com/photos/1107717/pexels-photo-1107717.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
     } else if (weather !== undefined

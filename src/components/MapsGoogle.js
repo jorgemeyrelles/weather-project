@@ -49,7 +49,7 @@ function MapsGoogle() {
   }, []);
 
   async function submitBtn(e) {
-    console.log('btn', e);
+    // console.log('btn', e);
     const data = await fetchWeather(`${e.latLng.lat()},${e.latLng.lng()}`);
     setWeather(data);
     setMarker({
