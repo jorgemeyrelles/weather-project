@@ -20,7 +20,7 @@ function MapsGoogle() {
   // , loadError
   const { isLoaded } = useLoadScript({
     id: 'google-map-script',
-    googleMapsApiKey: process.env.API_KEY_MAPS || 'AIzaSyAcifhLvWUgJ_I7eGGWhsTJs4w16o0iK1k',
+    googleMapsApiKey: process.env.REACT_APP_API_KEY_MAPS,
     libraries,
   });
 
